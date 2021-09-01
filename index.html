@@ -11,8 +11,11 @@
 <body>
     <h1 class="text-center">Welcome To Book World!</h1>
     <div class="input-group mb-3 w-50 mx-auto">
-        <input type="text" class="form-control" placeholder="Search your favourite books..." aria-label="Search your favourite books..." aria-describedby="button-addon2">
-        <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
+        <input id="search" type="text" class="form-control" placeholder="Search your favourite books..." aria-label="Search your favourite books..." aria-describedby="button-addon2">
+        <button onclick="showSearchedBooks()" class="btn btn-primary" type="button" id="button-addon2">Search</button>
+    </div>
+
+    <div id="books" class="row row-cols-1 row-cols-md-3 g-4 container mx-auto">
     </div>
 
     <script src="js/book.js"></script>
