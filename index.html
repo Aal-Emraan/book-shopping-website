@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="css/book.css">
 </head>
 <body>
-    <h1 class="text-center">Welcome To Book World!</h1>
-    <div class="input-group mb-3 w-50 mx-auto">
+    <h1 class="text-center mt-5 text-success">Welcome To Book World!</h1>
+    <div class="input-group mb-3 w-50 mx-auto my-4">
         <input id="search" type="text" class="form-control" placeholder="Search your favourite books..." aria-label="Search your favourite books..." aria-describedby="button-addon2">
         <button onclick="showSearchedBooks()" class="btn btn-primary" type="button" id="button-addon2">Search</button>
+    </div>
+
+    <div id="searchNumber" class="container mx-auto">
     </div>
 
     <div id="books" class="row row-cols-1 row-cols-md-3 g-4 container mx-auto">
