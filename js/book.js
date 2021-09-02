@@ -45,7 +45,7 @@ const bookInfo = (book) => {
 
     if(book.num_found === 0){
         searchNumber.innerHTML = `
-        <h5 class="mx-4 my-3 text-danger">No result found for <i class='fs-3 text-secondary'>"${search}"</i> 😪</h5>`;
+        <h5 class="mx-4 my-3 text-danger">No result found for <i class='fs-3 text-white'>"${search}"</i> 😪</h5>`;
     }else{
         searchNumber.innerHTML = `
         <h5 class="mx-4 my-3 text-info">${book.num_found} results found for <i class='fs-3 text-warning'>"${search}"</i> 😎</h5>`;
