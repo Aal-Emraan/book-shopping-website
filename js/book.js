@@ -30,7 +30,7 @@ const showSearchedBooks = () => {
         window.alert('Please type a book name...')
     }
     else{
-        const url = `http://openlibrary.org/search.json?q=${searchName}`;
+        const url = `https://openlibrary.org/search.json?q=${searchName}`;
         fetch(url)
         .then(res => res.json())
         .then(data => bookInfo(data))
@@ -48,12 +48,11 @@ const bookInfo = (book) => {
         <h5 class="mx-4 my-3 text-danger">no result found for <i class='fs-3 text-secondary'>${search}</i> 😪</h5>`;
     }else{
         searchNumber.innerHTML = `
-        <h5 class="mx-4 my-3 text-success">${book.num_found} results found for <i class='fs-3 text-primary'>${search}</i>.</h5>`;
+        <h5 class="mx-4 my-3 text-success">${book.num_found} results found for <i class='fs-3 text-primary'>${search}.</i></h5>`;
     }
 
     book.docs.forEach(book => {
         const coverImage = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`;
-        console.log(book.cover_i);
         const coverImg = () => {
             let coverImageLink = '';
             if(book.cover_i === undefined){
@@ -70,8 +69,8 @@ const bookInfo = (book) => {
         <h5 style="max-width:75%" class="card-title mx-auto mt-2">${book.title}</h5>
             <img height=300 src="${coverImg()}" class="card-img-top" alt="...">
             <div class="card-body">
-                <p class="card-text">Author: ${book.author_name[0]}</p>
-                <p class="card-text">Publisher: ${book.publisher[0]}</p>
+                <p class="card-text">Author: ${book.author_name}</p>
+                <p class="card-text">Publisher: ${book.publisher}</p>
                 <p class="card-text">First Publish Year: ${book.first_publish_year}</p>
             </div>
         </div>
