@@ -15,10 +15,15 @@
         <button onclick="showSearchedBooks()" class="btn btn-primary" type="button" id="button-addon2">Search</button>
     </div>
 
-    <div id="searchNumber" class="container mx-auto">
+    <button id="loading" class="btn btn-primary w-50 mx-auto" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Loading...
+    </button>
+
+    <div id="searchNumber" class="container mx-auto text-center">
     </div>
 
-    <div id="books" class="row row-cols-1 row-cols-md-3 g-4 container mx-auto">
+    <div id="books" class="row row-cols-1 row-cols-md-4 g-4 container mx-auto mb-5">
     </div>
 
     <script src="js/book.js"></script>
